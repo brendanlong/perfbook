@@ -30,7 +30,8 @@
 
 			texlive-latex texlive-collection-latexextra
 			psutils texlive-math* texlive-bibtex latex2html
-			xfig latex2html xfig (and maybe also gnuplot-latex
+			xfig latex2html xfig texlive-pst-tools
+			texlive-a2ping-bin (and maybe also gnuplot-latex
 			texlive-publishers-doc texlive-fonts-extra
 			texlive-science).
 

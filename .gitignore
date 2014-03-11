@@ -2,6 +2,7 @@
 # *.bbl -- but need to figure out what to do with my latex .bib files...
 *.blg
 *.dvi
+*.epub
 *.log
 *.pdf
 *.qqz

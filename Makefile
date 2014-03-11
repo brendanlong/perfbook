@@ -189,6 +189,9 @@ all: perfbook.pdf
 perfbook.pdf: $(LATEXSOURCES) $(EPSSOURCES) extraction embedfonts
 	sh utilities/runlatex.sh perfbook bib
 
+perfbook.epub: $(LATEXSOURCES) $(EPSSOURCES) extraction embedfonts
+	pandoc --toc --epub-metadata=metadata.xml --epub-cover-image=cover-front.pdf -o perfbook.epub perfbook.tex
+
 perfbook-1c.pdf: $(LATEXSOURCES) $(EPSSOURCES) extraction embedfonts
 	sed -e 's/,twocolumn//' -e '/^\\frontmatter/a \\\\pagestyle{plain}' -e 's/setboolean{twocolumn}{true}/setboolean{twocolumn}{false}/' < perfbook.tex > perfbook-1c.tex
 	sh utilities/runlatex.sh perfbook-1c bib
